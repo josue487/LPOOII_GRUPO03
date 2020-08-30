@@ -16,13 +16,45 @@ using System.Windows.Shapes;
 namespace Vistas
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// inicio de Login
     /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+ 
+        /// <summary>
+        /// Cierra el Programa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Ingresa al sistema
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnIngresar_Click(object sender, RoutedEventArgs e)
+        {
+                if (txtUsuario.Text.Equals("admin") && txtContraseña.Text.Equals("admin") ||
+                    txtUsuario.Text.Equals("vendedor") && txtContraseña.Text.Equals("vendedor"))
+                {
+                    Inicio inicio = new Inicio();
+                    this.Hide();
+                    inicio.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El Usuario y/o Contraseña es incorrecto");
+                }
+            
         }
     }
 }
