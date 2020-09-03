@@ -7,6 +7,55 @@
         mc:Ignorable="d"
         Title="Inicio" Height="450" Width="800">
     <Grid>
-        
+        <Image  Margin="0,0,-0.4,0" Name="fondo"  Stretch="UniformToFill" 
+           Source="Imagenes de Fondo/fondo.png" Grid.ColumnSpan="4"/>
+        <Menu Name="menu1" Width="Auto" HorizontalAlignment="Left"
+VerticalAlignment="Top" >
+            <MenuItem Header="_Usuario" Name="menuUsuario" >
+                <MenuItem Header="_Alta" />
+                <MenuItem Header="_Baja" />
+                <MenuItem Header="_Modificar" />
+                <MenuItem Header="_Buscar" />
+            </MenuItem>
+            <Separator />
+            <MenuItem Header="_Peliculas" Name="menuPeliculas" >
+                <MenuItem Header="_Alta" />
+                <MenuItem Header="_Baja" />
+                <MenuItem Header="_Modificar" />
+                <MenuItem Header="_Buscar" />
+            </MenuItem>
+            <Separator />
+            <MenuItem Header="_Butacas" Name="menuButacas">
+                <MenuItem Header="_Alta" />
+                <MenuItem Header="_Baja" />
+                <MenuItem Header="_Modificar" />
+                <MenuItem Header="_Buscar" />
+            </MenuItem>
+            <Separator />
+            <MenuItem Header="_Proyecciones" Name="menuProyecciones">
+                <MenuItem Header="_Alta" />
+                <MenuItem Header="_Baja" />
+                <MenuItem Header="_Modificar" />
+                <MenuItem Header="_Buscar" />
+            </MenuItem>
+            <Separator />
+            <MenuItem Header="_Clientes" Name="menuClientes" >
+                <MenuItem Header="_Alta" />
+                <MenuItem Header="_Baja" />
+                <MenuItem Header="_Modificar" />
+                <MenuItem Header="_Buscar" />
+            </MenuItem>
+            <Separator />
+            <MenuItem Header="_Tickets" Name="menuTickets">
+                <MenuItem Header="_Alta" />
+                <MenuItem Header="_Baja" />
+                <MenuItem Header="_Modificar" />
+                <MenuItem Header="_Buscar" />
+            </MenuItem>
+            <Separator />
+
+            <MenuItem Header="_Salir" Click="MenuItem_Click" />
+            <Separator />
+        </Menu>
     </Grid>
 </Window>

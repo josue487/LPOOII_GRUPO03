@@ -46,7 +46,7 @@ namespace Vistas
                 if (txtUsuario.Text.Equals("admin") && txtContraseña.Text.Equals("admin") ||
                     txtUsuario.Text.Equals("vendedor") && txtContraseña.Text.Equals("vendedor"))
                 {
-                    Inicio inicio = new Inicio();
+                    Inicio inicio = new Inicio(txtUsuario.Text);
                     this.Hide();
                     inicio.Show();
                 }

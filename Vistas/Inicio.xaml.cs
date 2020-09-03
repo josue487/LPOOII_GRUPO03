@@ -19,9 +19,27 @@ namespace Vistas
     /// </summary>
     public partial class Inicio : Window
     {
-        public Inicio()
+        public Inicio(string tipoDeUsuario)
         {
             InitializeComponent();
+            if (tipoDeUsuario.Equals("admin")){
+                menuClientes.Visibility = System.Windows.Visibility.Collapsed;
+                menuTickets.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            else
+            {
+                menuButacas.Visibility = System.Windows.Visibility.Collapsed;
+                menuPeliculas.Visibility = System.Windows.Visibility.Collapsed;
+                menuProyecciones.Visibility = System.Windows.Visibility.Collapsed;
+                menuUsuario.Visibility = System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow login = new MainWindow();
+            login.Show();
+            this.Close()
         }
     }
 }
